@@ -39,7 +39,7 @@ const EventSlider = () => {
         <h1 className="text-3xl font-bold">Popular Events</h1>
         <div className="flex">
           {items.map((items) => (
-            <div className="mr-4 border-2 rounded-lg shadow-lg">
+            <div className="mr-4 border-[#fff0] rounded-lg shadow-lg">
               <img src={DummyImage} />
               <p>{items.name}</p>
               <p className="flex items-center">

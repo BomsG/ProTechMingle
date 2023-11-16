@@ -20,9 +20,11 @@ const Confirm = () => {
           </button>
           <p className="pt-3 font-semibold text-sm lg:text-[16px]">
             didnt get Email?{" "}
+            <Link to="/set-new-password">
             <span className="text-[#003366] font-bold cursor-pointer">
               Click to resend
             </span>
+            </Link>
           </p>
           <Link to="/">
             <p className="text-[#003366] font-bold text-sm pt-2 flex justify-center items-center">

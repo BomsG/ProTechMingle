@@ -126,7 +126,9 @@ const Login = () => {
               </button>
               <h3 className="text-center font-semibold mt-4 text-sm">
                 Don't have an account?{" "}
+                <Link to="/signup">
                 <span className="text-[#003366]">Sign up</span>
+                </Link>
               </h3>
             </form>
           </div>

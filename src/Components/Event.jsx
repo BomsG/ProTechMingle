@@ -21,7 +21,7 @@ const Event = () => {
           <h1 className="text-xl font-semibold  text-[#244759] mr-3">
             ProTechMingle
           </h1>
-          <div className="flex items-center border-2 w-[350px] pl-2 rounded-lg">
+          <div className="flex items-center border w-[350px] pl-2 rounded-lg">
             <IoSearchOutline />
             <input
               type="search"
@@ -56,7 +56,7 @@ const Event = () => {
         <div className="mt-10">
           <h1 className="text-3xl font-bold">Events</h1>
           <div className="flex items-center mt-5">
-            <div className="flex items-center border-2 w-[70%] pl-2 rounded-[5px] ">
+            <div className="flex items-center border w-[70%] pl-2 rounded-[5px] ">
               <IoSearchOutline />
               <input
                 type="search"
