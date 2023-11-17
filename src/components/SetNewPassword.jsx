@@ -5,7 +5,7 @@ import leftArrow from '../assets/button-icon1.png'
 
 const SetNewPassword = () => {
   return (
-    <div className='h-auto max-w-md font-inter flex flex-col items-center justify-center mx-auto py-9'>
+    <div className='h-screen max-w-md font-inter flex flex-col items-center justify-center mx-auto'>
         <img src={PadLock} alt='lock img' className='w-24 mb-12'/>
         <h2 className='text-3xl font-medium text-center mb-3'>Set new password</h2>
         <p className='text-center text-xl font-normal mb-8'>Fill in the details with your preferred new password</p>
