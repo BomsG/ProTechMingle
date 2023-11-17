@@ -66,7 +66,7 @@ const Login = () => {
               ProTechMingle
             </h1>
             <h1 className="text-3xl font-semibold pb-2 text-center  lg:text-left">
-              Login to your account
+              Login to your accoun
             </h1>
             <p className="2xl pb-4 text-center  lg:text-left">Welcome back!</p>
             <form className="w-full lg:w-[60%] ">
@@ -127,7 +127,7 @@ const Login = () => {
               <h3 className="text-center font-semibold mt-4 text-sm">
                 Don't have an account?{" "}
                 <Link to="/signup">
-                <span className="text-[#003366]">Sign up</span>
+                  <span className="text-[#003366]">Sign up</span>
                 </Link>
               </h3>
             </form>
