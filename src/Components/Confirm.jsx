@@ -15,18 +15,18 @@ const Confirm = () => {
           <p className="text-[12px] md:text-[15px] lg:text-[1p6x] pt-2">
             The link to reset your password has been sent to Johndoe@gmail.com
           </p>
-          <button className="bg-[#003366] w-full text-white text-sm rounded-sm py-3 mt-5 font-semibold">
+          <button className="bg-[#003366] w-[80%] text-white text-sm rounded-lg py-3 mt-5 font-semibold">
             Send resend Link
           </button>
           <p className="pt-3 font-semibold text-sm lg:text-[16px]">
-            didnt get Email?{" "}
+            didn't get Email?{" "}
             <Link to="/set-new-password">
-            <span className="text-[#003366] font-bold cursor-pointer">
-              Click to resend
-            </span>
+              <span className="text-[#003366] font-bold cursor-pointer">
+                Click to resend
+              </span>
             </Link>
           </p>
-          <Link to="/">
+          <Link to="/Login">
             <p className="text-[#003366] font-bold text-sm pt-2 flex justify-center items-center">
               <FaArrowLeftLong /> back to Login
             </p>

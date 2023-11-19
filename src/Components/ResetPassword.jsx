@@ -32,7 +32,7 @@ const ResetPassword = () => {
                 Send resend Link
               </button>
             </Link>
-            <Link to="/">
+            <Link to="/Login">
               <h2 className="pt-3 text-center text-sm font-bold text-[#003366] flex justify-center items-center">
                 <FaArrowLeftLong /> Back to Login
               </h2>

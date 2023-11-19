@@ -36,7 +36,7 @@ const Login = () => {
   return (
     <>
       <div className="h-full bg-[#fefefe]  flex  items-center ">
-        <div className="w-[100%] h-[100%] bg-[#E6EBF0]  pl-[50px] pt-[50px] hidden  lg:block">
+        <div className="w-[100%]  h-[100%] bg-[#E6EBF0]  pl-[50px] pt-[50px] hidden  lg:block">
           <div className=" h-[100vh] w-[100%]">
             <h1 className="text-4xl font-semibold pb-6">
               Introducing <span className="text-[#244759]">ProTechMingle</span>
@@ -60,7 +60,7 @@ const Login = () => {
             <img src={illustrator} className="w-[80%] h-[430px] pt-10" />
           </div>
         </div>
-        <div className="w-[100%] ml-0 md:ml-0 lg:ml-[100px] mt-10 flex lg:block items-center justify-center mb-10">
+        <div className="w-[100%] lg:w-[90%] ml-0 md:ml-0 lg:ml-[100px] mt-10 flex lg:block items-center justify-center mb-10">
           <div className="">
             <h1 className="text-[#244759] mb-20 text-[26px] text-center font-[500] block lg:hidden">
               ProTechMingle
@@ -79,6 +79,7 @@ const Login = () => {
                 id="email"
                 className="w-[100%] py-[12px] px-2 border border-[#656565] rounded-[5px] text-sm mb-5"
                 onChange={(e) => setEmail(e.target.value)}
+                required
               />
               <label
                 for="password"
@@ -93,6 +94,7 @@ const Login = () => {
                   id="password"
                   className="w-full border-none outline-none  text-sm"
                   onChange={(e) => setPassword(e.target.value)}
+                  required
                 />
                 <FaRegEyeSlash onClick={togglePasswordVisiblity} />
               </div>
@@ -102,7 +104,7 @@ const Login = () => {
                   <p>Remember me?</p>
                 </div>
                 <div>
-                  <Link to="Reset">
+                  <Link to="/Reset">
                     <a href="#" className="text-[#003366] font-semibold">
                       Forgot password?
                     </a>
@@ -126,7 +128,7 @@ const Login = () => {
               </button>
               <h3 className="text-center font-semibold mt-4 text-sm">
                 Don't have an account?{" "}
-                <Link to="/signup">
+                <Link to="/">
                   <span className="text-[#003366]">Sign up</span>
                 </Link>
               </h3>
