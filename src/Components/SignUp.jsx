@@ -55,8 +55,9 @@ const SignUp = () => {
               <input type='submit' value='Get Started' className='text-center w-full bg-signupButton text-white text-xl font-semibold rounded-md py-4 px-6 cursor-pointer mb-6' />  
             </form>
             <button className='max-w-md mx-auto w-11/12 lg:w-full border border-solid border-signupButton rounded-md p-4 mb-6 flex items-center justify-center'><img src={buttonIcon} alt='google icon' className='mr-2 w-9' /><span className='font-semibold text-xl text-signupButton'>Sign up with Google</span></button>
-
-            <h6 className='mb-9 lg:mb-0 font-normal text-base lg:text-xl text-center'>Already have an account? <span className='font-medium text-signupButton'><Link to="/"><a href='/login'>Log in</a></Link></span></h6>
+   <Link to="/Login">
+            <h6 className='mb-9 lg:mb-0 font-normal text-base lg:text-xl text-center'>Already have an account? <span className='font-medium text-signupButton'><Link to="/"><a href='/login'>Log in</a></Link></span></h6> 
+     </Link>
           </div>
         </div>
       </div>
