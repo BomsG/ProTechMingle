@@ -1,13 +1,17 @@
-import { HiMiniArrowRightOnRectangle, HiMiniLink, HiOutlineExclamationCircle, HiPencil, HiTrash } from "react-icons/hi2";
+import {
+  HiMiniArrowRightOnRectangle,
+  HiMiniLink,
+  HiOutlineExclamationCircle,
+  HiPencil,
+} from "react-icons/hi2";
 import Avatar from "../../images/Avatars.png";
 import CommunityBanner from "../../images/community-banner.png";
 import Menus from "../general-features/Menu";
 
-
 //each card should have a unique id
 
 //eslint-disable-next-line
-function Card({id}) {
+function Card({ id }) {
   return (
     <Menus>
       <div className="rounded-[8px] border-[#C4C4C4] border-[1px] space-y-[16px] py-[16px] px-[15px] w-[381px]">
@@ -43,15 +47,22 @@ function Card({id}) {
             </div>
           </div>
           <Menus.Menu>
-            <Menus.Toggle id={id} />
-            {/* <div className="w-[24px] grid place-items-center h-[24px] rounded-full bg-[#E6EBF0]">
-                ...
-              </div> */}
+            <Menus.Toggle id={id}>
+              <div className="w-[24px] cursor-pointer grid place-items-center h-[24px] rounded-full bg-[#E6EBF0] ">
+                <div className="absolute top-[2px]">...</div>
+              </div>
+            </Menus.Toggle>
             <Menus.List id={id}>
-              <Menus.Button icon={<HiMiniLink />}>Copy community link</Menus.Button>
+              <Menus.Button icon={<HiMiniLink />}>
+                Copy community link
+              </Menus.Button>
               <Menus.Button icon={<HiPencil />}>Pin community</Menus.Button>
-              <Menus.Button icon={<HiOutlineExclamationCircle />}>Report community</Menus.Button>
-              <Menus.Button icon={<HiMiniArrowRightOnRectangle />}>Leave community</Menus.Button>
+              <Menus.Button icon={<HiOutlineExclamationCircle />}>
+                Report community
+              </Menus.Button>
+              <Menus.Button icon={<HiMiniArrowRightOnRectangle />}>
+                Leave community
+              </Menus.Button>
             </Menus.List>
           </Menus.Menu>
         </div>

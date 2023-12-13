@@ -1,32 +1,7 @@
 import { createContext, useContext, useState } from "react";
-import { HiEllipsisVertical } from "react-icons/hi2";
 import useTouchOutside from "../../contexts/useTouchOutside";
 
-// const StyledToggle = styled.button`
 
-//   &:hover {
-//     background-color: var(--color-grey-100);
-//   }
-
-//   & svg {
-//     width: 2.4rem;
-//     height: 2.4rem;
-//     color: var(--color-grey-700);
-//   }
-// `;
-
-// const StyledButton = styled.button`
-//   &:hover {
-//     background-color: var(--color-grey-50);
-//   }
-
-//   & svg {
-//     width: 1.6rem;
-//     height: 1.6rem;
-//     color: var(--color-grey-400);
-//     transition: all 0.3s;
-//   }
-// `;
 
 const MenuContext = createContext();
 

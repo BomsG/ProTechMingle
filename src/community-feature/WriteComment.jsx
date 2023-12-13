@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import EmojiPicker from "emoji-picker-react";
 
@@ -7,16 +7,30 @@ import Menus from "./general-features/Menu";
 import { createPortal } from "react-dom";
 
 function WriteComment() {
-  const [chosenEmoji, setChosenEmoji] = useState(null);
+  const [chosenEmoji, setChosenEmoji] = useState("");
+  const [position, setPosition] = useState(null);
+  const [postInput, setPostInput] = useState("");
   const [openEmoji, setOpenEmoji] = useState(false);
-  const handleOpenEmoji = () => {
+
+  const handleOpenEmoji = (e) => {
+    const rect = e.target.closest("button").getBoundingClientRect();
+    setPosition({
+      x: window.innerWidth - rect.width - rect.x,
+      y: rect.y + rect.height + 8,
+    });
+    console.log(position);
     setOpenEmoji((openEmoji) => !openEmoji);
   };
 
-  const handleEmojiClick = (emoji) => {
-    setChosenEmoji(emoji);
-    // You can perform additional actions with the selected emoji if needed
-  };
+ 
+
+  function handleChange(e) {
+    setPostInput(e.target.value);
+  }
+  // const handleEmojiClick = (emoji) => {
+  //   setChosenEmoji(emoji);
+  //   // You can perform additional actions with the selected emoji if needed
+  // };
 
   return (
     <div className="grid grid-cols-[80px_1fr] gap-[15px] w-full py-[12px] comment">
@@ -27,6 +41,8 @@ function WriteComment() {
         <div className="flex bg-[#F7F7F7] justify-between p-[10px] rounded-[5px]">
           <input
             type="text"
+            onChange={handleChange}
+            value={postInput}
             className="bg-[#F7F7F7] w-full focus:outline-none focus:border-none"
             placeholder="Write your Comment"
           />
@@ -59,11 +75,8 @@ function WriteComment() {
                 />
               </svg>
             </button>
-            {openEmoji && (
-              <div className="relative">
-                <EmojiPicker />
-              </div>
-            )}
+            {/* {openEmoji && ( */}
+            {/* )} */}
 
             <label htmlFor="comment-image" className="cursor-pointer">
               <svg
@@ -88,6 +101,16 @@ function WriteComment() {
             <input type="file" id="comment-image" style={{ display: "none" }} />
           </div>
         </div>
+        {openEmoji && (
+          <div className={`right-[${position.x}px] top-[${position.y + 70}px]`}>
+            <EmojiPicker
+              onEmojiClick={(e) => {
+                setChosenEmoji(e.emoji);
+                setPostInput((c) => c + e.emoji);
+              }}
+            />
+          </div>
+        )}
       </Menus>
     </div>
   );
