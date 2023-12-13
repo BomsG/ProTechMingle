@@ -4,9 +4,9 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useData } from "../../contexts/DataContext";
 
 function CommunityHeader() {
-  const { dispatch, aboutPage } = useData();
+  const { dispatch, postsPage } = useData();
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   return (
     <div className="space-y-[12px] bg-white">
       <div className="mb-[10px]">
@@ -82,12 +82,17 @@ function CommunityHeader() {
       </div>
       <div className="grid grid-cols-[1fr_1fr_1fr_1fr] pt-[20px]">
         <button
-          className="px-[15px] py-[10px] cursor-pointer focus:text-[#036] focus:border-b-[2px] border-[#036]"
+          className={`px-[15px] py-[10px] cursor-pointer focus:text-[#036] focus:border-b-[2px] border-[#036] ${
+            postsPage && "text-[#036] border-b-[2px]"
+          }`}
           onClick={() => dispatch({ type: "open-posts" })}
         >
           Posts
         </button>
-        <button className="px-[15px] py-[10px] cursor-pointer focus:text-[#036] focus:border-b-[2px] border-[#036]">
+        <button
+          className="px-[15px] py-[10px] cursor-pointer focus:text-[#036] focus:border-b-[2px] border-[#036]"
+          onClick={() => dispatch({ type: "open-latest" })}
+        >
           Latest
         </button>
         <button

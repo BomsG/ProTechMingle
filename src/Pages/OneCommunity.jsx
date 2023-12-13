@@ -102,8 +102,10 @@ const GROUP_RULES = [
 ];
 
 function OneCommunity() {
-  const { aboutPage, membersPage, postsPage } = useData();
-  const [isMember, setIsMember] = useState(false);
+  const { aboutPage, membersPage, postsPage, latestPage } = useData();
+
+  console.log(aboutPage, membersPage, postsPage);
+
   return (
     <div>
       <Header />
@@ -128,6 +130,7 @@ function OneCommunity() {
         <Body.CenterContent>
           <CommunityHeader />
           {postsPage && <Center />}
+          {latestPage && <Center />}
           {membersPage && <Members />}
           {aboutPage && <About />}
         </Body.CenterContent>

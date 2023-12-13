@@ -6,8 +6,10 @@ const initialState = {
   aboutPage: false,
   membersPage: false,
   postsPage: true,
+  latestPage: false,
   modalContent: "",
 };
+
 function reducer(state, action) {
   switch (action.type) {
     case "open-about":
@@ -16,6 +18,7 @@ function reducer(state, action) {
         aboutPage: true,
         membersPage: false,
         postsPage: false,
+        latestPage: false,
       };
     case "open-members":
       return {
@@ -23,6 +26,7 @@ function reducer(state, action) {
         membersPage: true,
         aboutPage: false,
         postsPage: false,
+        latestPage: false,
       };
     case "open-posts":
       return {
@@ -30,6 +34,15 @@ function reducer(state, action) {
         postsPage: true,
         aboutPage: false,
         membersPage: false,
+        latestPage: false,
+      };
+    case "open-latest":
+      return {
+        ...state,
+        latestPage: true,
+        aboutPage: false,
+        membersPage: false,
+        postsPage: false,
       };
     default:
       throw new Error("No matching action type");
@@ -39,13 +52,13 @@ function reducer(state, action) {
 
 //eslint-disable-next-line
 function DataContext({ children }) {
-  const [{ aboutPage, modalContent }, dispatch] = useReducer(
+  const [{ aboutPage, postsPage, membersPage, modalContent, latestPage }, dispatch] = useReducer(
     reducer,
     initialState
   );
 
   return (
-    <ModalDataContext.Provider value={{aboutPage, modalContent, dispatch}}>
+    <ModalDataContext.Provider value={{aboutPage, postsPage, latestPage, membersPage, modalContent, dispatch}}>
       {children}
     </ModalDataContext.Provider>
   );
