@@ -5,7 +5,7 @@ function MemberCard({ isMod }) {
   return (
     <div className="flex justify-between py-[10px] px-[15px] bg-white">
       <div className="flex items-center gap-[8px]">
-        <img src={Image} alt="" />
+        <img src={Image} alt="member" />
         <div className="space-y-[5px">
           <h4>Malik Mustapha</h4>
           <div className="text-[12px] text-[#525252]">Project Manager</div>

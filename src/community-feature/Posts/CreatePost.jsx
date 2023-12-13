@@ -18,7 +18,7 @@ function CreatePost() {
       <div className="text-[20px]">Create post</div>
       <div>
         <textarea
-          name=""
+          name="create-post"
           id=""
           placeholder="What's up, Jonathan"
           cols="15"

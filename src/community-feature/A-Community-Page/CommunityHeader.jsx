@@ -27,17 +27,17 @@ function CommunityHeader() {
               <img
                 src={Image}
                 className="w-[24px] h-[24px] ml-[-6px] "
-                alt=""
+                alt="a community member"
               />
               <img
                 src={Image}
                 className="w-[24px] h-[24px] ml-[-6px] "
-                alt=""
+                alt="a community member"
               />
               <img
                 src={Image}
                 className="w-[24px] h-[24px] ml-[-6px] "
-                alt=""
+                alt="a community member"
               />
             </div>
           </div>

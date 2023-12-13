@@ -7,7 +7,6 @@ const initialState = {
   membersPage: false,
   postsPage: true,
   latestPage: false,
-  modalContent: "",
 };
 
 function reducer(state, action) {

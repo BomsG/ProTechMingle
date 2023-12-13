@@ -11,20 +11,21 @@ function CreateCommunity() {
         </div>
         <div className="py-[24px] px-[16px]">
           <div className="flex flex-col gap-[8px]">
-            <label htmlFor="">Community Name</label>
+            <label htmlFor="specialization">Community Name</label>
             <input
               type="text"
+              id="specialization"
               className="border-[1px] border-[#656565] p-[10px] rounded-[8px]"
               placeholder="UI/UX Soldier"
             />
           </div>
 
           <div className="flex gap-[8px] flex-col py-[24px]">
-            <label htmlFor="">Community Type</label>
+            <label htmlFor="select-privacy">Community Type</label>
 
             <Menus.Menu>
               <Menus.Toggle>
-                <button className="border-[1px] text-[#65656] text-left boder-[#656565] bg-transparent  p-[10px] rounded-[8px] w-full">
+                <button id="select-privacy" className="border-[1px] text-[#65656] text-left boder-[#656565] bg-transparent  p-[10px] rounded-[8px] w-full">
                   Choose Type
                 </button>
               </Menus.Toggle>
@@ -59,12 +60,12 @@ function CreateCommunity() {
           </div>
 
           <div className="flex flex-col gap-[8px]">
-            <label htmlFor="">About Community</label>
+            <label htmlFor="description">About Community</label>
             <textarea
               className="border-[1px] border-[#656565]  p-[12px] rounded-[8px]"
-              name=""
+              name="post"
               placeholder="Add description"
-              id=""
+              id="description"
               cols="20"
               rows="3"
             ></textarea>

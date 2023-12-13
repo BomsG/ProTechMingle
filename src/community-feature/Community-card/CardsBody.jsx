@@ -26,12 +26,12 @@ function CardsBody({ label }) {
                 <img
                   src={Image}
                   className="ml-[-6px] w-[24px] h-[24px]"
-                  alt=""
+                  alt="a community member"
                 />
                 <img
                   src={Image}
                   className="ml-[-6px] w-[24px] h-[24px]"
-                  alt=""
+                  alt="a community member"
                 />
               </div>
             </div>

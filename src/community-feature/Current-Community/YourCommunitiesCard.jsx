@@ -20,7 +20,7 @@ function Card({ id }) {
             <img
               src={CommunityBanner}
               className="w-[80px] h-[80px] rounded-[10px] object-cover"
-              alt=""
+              alt="a community banner"
             />
             <div className="space-y-[4px]">
               <p>Design Comrade</p>
@@ -30,17 +30,17 @@ function Card({ id }) {
                   <img
                     className="ml-[6px] w-[24px] h-[24px]"
                     src={Avatar}
-                    alt=""
+                    alt="a community member"
                   />
                   <img
                     className="ml-[-6px] w-[24px] h-[24px]"
                     src={Avatar}
-                    alt=""
+                    alt="a community member"
                   />
                   <img
                     className="ml-[-6px] w-[24px] h-[24px]"
                     src={Avatar}
-                    alt=""
+                    alt="a community member"
                   />
                 </div>
               </div>
