@@ -6,7 +6,7 @@ import {
 } from "react-icons/hi2";
 import Avatar from "../../images/Avatars.png";
 import CommunityBanner from "../../images/community-banner.png";
-import Menus from "../general-features/Menu";
+import Menus from "../community-features/Menu";
 
 //each card should have a unique id
 
@@ -52,14 +52,18 @@ function Card({ id }) {
                 <div className="absolute top-[2px]">...</div>
               </div>
             </Menus.Toggle>
+
             <Menus.List id={id}>
               <Menus.Button icon={<HiMiniLink />}>
                 Copy community link
               </Menus.Button>
+
               <Menus.Button icon={<HiPencil />}>Pin community</Menus.Button>
+
               <Menus.Button icon={<HiOutlineExclamationCircle />}>
                 Report community
               </Menus.Button>
+
               <Menus.Button icon={<HiMiniArrowRightOnRectangle />}>
                 Leave community
               </Menus.Button>

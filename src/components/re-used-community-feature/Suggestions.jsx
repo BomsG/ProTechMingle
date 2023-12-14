@@ -1,4 +1,4 @@
-import Card from "./general-features/Card";
+import Card from "./Card";
 import { Link } from "react-router-dom";
 
 //eslint-disable-next-line

@@ -1,6 +1,6 @@
 import PostHeader from "./PostHeader";
 import Stats from "./Stats";
-import WriteComment from "../WriteComment";
+import WriteComment from "./WriteComment";
 
 //eslint-disable-next-line
 function Posts({ title, src, community, content, field, posterName }) {

@@ -8,11 +8,11 @@ import SignUp from "./components/SignUp";
 import ResetSuccessful from "./components/ResetSuccessful";
 import Community from "./Pages/Community";
 import OneCommunity from "./Pages/OneCommunity";
-import AllCommunities from "./community-feature/AllCommunities";
-import CommunityList from "./community-feature/CommunityList";
-import YourCommunites from "./community-feature/YourCommunites";
-import About from "./community-feature/A-Community-Page/About";
-import {  DataContext } from "./contexts/DataContext";
+import AllCommunities from "./components/community-features/AllCommunities";
+import CommunityList from "./components/community-features/CommunityList";
+import YourCommunites from "./components/community-features/YourCommunites";
+import About from "./components/community-features/About";
+import { DataContext } from "./contexts/DataContext";
 
 function App() {
   return (

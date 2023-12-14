@@ -1,16 +1,16 @@
-import YourCommunitiesCard from "./Current-Community/YourCommunitiesCard"
+import CardsBody from "../re-used-community-feature/CardsBody"
 
-function YourCommunites() {
+function CommunityList() {
     return (
         <div>
           <h1>Communities</h1>
           <div className="pt-[100px] flex flex-wrap justify-center gap-[24px]">
             {Array.from({ length: 30 }, (_, i) => (
-              <YourCommunitiesCard key={i} />
+              <CardsBody key={i} label="Comunnities" />
             ))}
           </div>
         </div>
     )
 }
 
-export default YourCommunites
+export default CommunityList

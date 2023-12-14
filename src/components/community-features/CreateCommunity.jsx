@@ -25,10 +25,14 @@ function CreateCommunity() {
 
             <Menus.Menu>
               <Menus.Toggle>
-                <button id="select-privacy" className="border-[1px] text-[#65656] text-left boder-[#656565] bg-transparent  p-[10px] rounded-[8px] w-full">
+                <button
+                  id="select-privacy"
+                  className="border-[1px] text-[#65656] text-left boder-[#656565] bg-transparent  p-[10px] rounded-[8px] w-full"
+                >
                   Choose Type
                 </button>
               </Menus.Toggle>
+
               <Menus.List communityType="false">
                 <Menus.Button className="flex align-top gap-[8px]">
                   <div className="text-[24px]">

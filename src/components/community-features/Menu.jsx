@@ -1,8 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import useTouchOutside from "../../contexts/useTouchOutside";
 
-
-
 const MenuContext = createContext();
 
 //eslint-disable-next-line

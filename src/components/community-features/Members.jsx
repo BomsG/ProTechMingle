@@ -1,4 +1,4 @@
-import MemberCard from "./MemberCard";
+import MemberCard from "../re-used-community-feature/MemberCard";
 
 function Members() {
   return (

@@ -1,10 +1,10 @@
 import AddCommunity from "./AddCommunity";
 import Center from "./Center";
-import Suggestions from "./Suggestions";
-import Body from "./general-features/Body";
-import Modal from "./general-features/Modal";
+import Suggestions from "../re-used-community-feature/Suggestions";
+import Body from "./Body";
+import Modal from "./Modal";
 
-import CreateCommunity from "./general-features/CreateCommunity";
+import CreateCommunity from "./CreateCommunity";
 
 const communityCards = [
   {
@@ -41,7 +41,6 @@ const communityCards = [
 
 //creating a new community requires a specicial id, i think
 
-let id = 5;
 function AllCommunities() {
   return (
     <Modal>
@@ -56,6 +55,7 @@ function AllCommunities() {
               cards={communityCards}
             />
           </Body.Left>
+
           <Body.CenterContent>
             <AddCommunity />
 
@@ -64,6 +64,7 @@ function AllCommunities() {
             </Modal.Window>
             <Center />
           </Body.CenterContent>
+
           <Body.Right>
             <Suggestions
               label="My Communities"

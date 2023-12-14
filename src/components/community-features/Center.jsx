@@ -1,5 +1,5 @@
-import CreatePost from "./Posts/CreatePost";
-import Posts from "./Posts/Posts";
+import CreatePost from "./CreatePost";
+import Posts from "../re-used-community-feature/Posts";
 
 const POST_STRUCTURE = [
   {

@@ -1,12 +1,11 @@
-import CommunityHeader from "../community-feature/A-Community-Page/CommunityHeader";
-import Body from "../community-feature/general-features/Body";
-import Center from "../community-feature/Center";
-import Header from "../community-feature/general-features/Header";
-import Suggestions from "../community-feature/Suggestions";
-import Members from "../community-feature/Members/Members";
-import { useState } from "react";
+import CommunityHeader from "../components/community-features/CommunityHeader";
+import Body from "../components/community-features/Body";
+import Center from "../components/community-features/Center";
+import Header from "../components/re-used-community-feature/Header";
+import Suggestions from "../components/re-used-community-feature/Suggestions";
+import Members from "../components/community-features/Members";
 import { useData } from "../contexts/DataContext";
-import About from "../community-feature/A-Community-Page/About";
+import About from "../components/community-features/About";
 
 const communityCards = [
   {

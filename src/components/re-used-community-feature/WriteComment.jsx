@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import EmojiPicker from "emoji-picker-react";
 
-import Image from "../assets/Image.png";
-import Menus from "./general-features/Menu";
-import { createPortal } from "react-dom";
+import Image from "../../assets/Image.png";
+import Menus from "../community-features/Menu";
 
 function WriteComment() {
   const [chosenEmoji, setChosenEmoji] = useState("");
@@ -18,19 +17,13 @@ function WriteComment() {
       x: window.innerWidth - rect.width - rect.x,
       y: rect.y + rect.height + 8,
     });
-    console.log(position);
+
     setOpenEmoji((openEmoji) => !openEmoji);
   };
-
- 
 
   function handleChange(e) {
     setPostInput(e.target.value);
   }
-  // const handleEmojiClick = (emoji) => {
-  //   setChosenEmoji(emoji);
-  //   // You can perform additional actions with the selected emoji if needed
-  // };
 
   return (
     <div className="grid grid-cols-[80px_1fr] gap-[15px] w-full py-[12px] comment">
