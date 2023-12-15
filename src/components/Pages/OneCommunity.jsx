@@ -1,7 +1,169 @@
-import communityBanner from "../../images/community-banner.png";
-import Image from "../../images/Avatars.png";
-import { NavLink, useNavigate } from "react-router-dom";
 import { useData } from "../../contexts/DataContext";
+
+
+import Body from "../re-used-community-feature/Body";
+import Posts from '../re-used-community-feature/Posts'
+import CreatePost from '../re-used-community-feature/CreatePost'
+import Header from "../re-used-community-feature/Header";
+import Suggestions from "../re-used-community-feature/Suggestions";
+import MemberCard from "../re-used-community-feature/MemberCard";
+import About from "./About";
+
+
+import communityBanner from "../../images/community-banner.png";
+import Image from '../../images/Avatars.png'
+
+const communityCards = [
+  {
+    label: "Python Group",
+    quantity: "200",
+    right: "Join",
+    id: 1,
+  },
+  {
+    label: "Python Group",
+    quantity: "200",
+    right: "Join",
+    id: 2,
+  },
+  {
+    label: "Python Group",
+    quantity: "200",
+    right: "Join",
+    id: 3,
+  },
+  {
+    label: "Python Group",
+    quantity: "200",
+    right: "Join",
+    id: 4,
+  },
+  {
+    label: "Python Group",
+    quantity: "200",
+    right: "Join",
+    id: 5,
+  },
+];
+
+const connectionCard = [
+  {
+    right: "Connect",
+    name: "BOma Pearls",
+    field: "UI/UX Designer",
+    id: 6,
+  },
+  {
+    right: "Connect",
+    name: "BOma Pearls",
+    field: "UI/UX Designer",
+    id: 6,
+  },
+  {
+    right: "Connect",
+    name: "BOma Pearls",
+    field: "UI/UX Designer",
+    id: 7,
+  },
+  {
+    right: "Connect",
+    name: "BOma Pearls",
+    field: "UI/UX Designer",
+    id: 8,
+  },
+  {
+    right: "Connect",
+    name: "BOma Pearls",
+    field: "UI/UX Designer",
+    id: 10,
+  },
+];
+
+const membersCard = [
+  {
+    right: "Connect",
+    name: "BOma Pearls",
+    field: "UI/UX Designer",
+    id: 6,
+  },
+  {
+    right: "Connect",
+    name: "BOma Pearls",
+    field: "UI/UX Designer",
+    id: 6,
+  },
+];
+
+const ABOUT_CONTENT = `Welcome to Design Comrade! 🚀 We're not just a community; we're a squad of creative minds, a hub where design enthusiasts unite. Whether you're a seasoned pro or just starting your creative journey, you're among comrades here.`;
+
+const GROUP_RULES = [
+  {
+    content: "Respectful Communication",
+  },
+  { content: "Constructive Critique" },
+  { content: "Relevant Content Only" },
+  { content: "Inclusivity Matters" },
+  { content: "Privacy and Confidentiality" },
+];
+
+
+
+const POST_STRUCTURE = [
+  {
+    title: "Post Title",
+    content: `Post content Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione sunt et explicabo saepe temporibus veniam alias iste nihil obcaecati beatae
+        autem voluptas labore eveniet iure pariatur cupiditate, necessitatibus a
+        porro optio assumenda repellendus quam quia praesentium ad! Sapiente
+        illo aliquam libero, labore possimus nesciunt delectus praesentium, ipsa
+        quas nostrum neque. `,
+    image: "Post Image",
+    community: "Design Comrade",
+    posterName: "Boma Pearls",
+    field: "UI/UX Designer",
+  },
+  {
+    title: "Post Title",
+    content: "Post content",
+    image: "Post Image",
+    community: "Design Comrade",
+    posterName: "Boma Pearls",
+    field: "UI/UX Designer",
+  },
+  {
+    title: "Post Title",
+    content: "Post content",
+    image: "Post Image",
+    community: "Design Comrade",
+    posterName: "Boma Pearls",
+    field: "UI/UX Designer",
+  },
+];
+
+
+function Center() {
+  return (
+    <div className="flex flex-col gap-[15px] ">
+      <CreatePost />
+
+      {/* POSTS */}
+      {POST_STRUCTURE.map((post) => (
+        <Posts
+          title={post.title}
+          src={post.image}
+          community={post.community}
+          content={post.content}
+          field={post.field}
+          posterName={post.posterName}
+          key={post.content}
+        />
+      ))}
+    </div>
+  );
+}
+
+
+
+
 
 function CommunityHeader() {
   const { dispatch, postsPage } = useData();
@@ -112,4 +274,88 @@ function CommunityHeader() {
   );
 }
 
-export default CommunityHeader;
+
+
+
+function Members() {
+  return (
+    <div>
+      <div className="border-b-[1px] border-black space-y-p">
+        {Array.from({ length: 5 }, (_, i) => (
+          <MemberCard key={i} />
+        ))}
+      </div>
+      <div>
+      {Array.from({ length: 5 }, (_, i) => (
+          <MemberCard key={i} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+
+
+
+function OneCommunity() {
+  const { aboutPage, membersPage, postsPage, latestPage } = useData();
+
+  console.log(aboutPage, membersPage, postsPage);
+
+  return (
+    <div>
+      <Header />
+
+      <Body>
+        <Body.Left>
+          <Suggestions
+            label="Suggested Communities"
+            existingCommunity={false}
+            moderatorCard={true}
+            cards={membersCard}
+          />
+
+          <Suggestions
+            label="Suggested Communities"
+            existingCommunity={false}
+            moderatorCard={true}
+            members={true}
+            cards={connectionCard}
+          />
+        </Body.Left>
+        <Body.CenterContent>
+          <CommunityHeader />
+          {postsPage && <Center />}
+          {latestPage && <Center />}
+          {membersPage && <Members />}
+          {aboutPage && <About />}
+        </Body.CenterContent>
+        <Body.Right>
+          <Suggestions
+            label="About"
+            existingCommunity={true}
+            cards={communityCards}
+            about={ABOUT_CONTENT}
+          />
+
+          <div className="bg-white rounded-[10px] h-[auto] self-start">
+            <div className="border-b py-[10px] mb-[20px] px-[15px]">
+              Community Rules
+            </div>
+
+            {GROUP_RULES.map((rule, i) => (
+              <p className="px-[15px] py-[10px]" key={rule.content}>
+                {i + 1}. {rule.content}
+              </p>
+            ))}
+          </div>
+        </Body.Right>
+      </Body>
+    </div>
+  );
+}
+
+
+
+
+export default OneCommunity;

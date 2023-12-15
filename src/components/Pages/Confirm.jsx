@@ -1,5 +1,5 @@
 import React from "react";
-import Mails from "../images/Mails.png";
+import Mails from "../../images/Mails.png";
 import { Link } from "react-router-dom";
 import { FaArrowLeftLong } from "react-icons/fa6";
 

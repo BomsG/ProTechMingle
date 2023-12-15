@@ -1,5 +1,5 @@
 import React from "react";
-import Reset from "../images/reset.png";
+import Reset from "../../images/reset.png";
 import { Link } from "react-router-dom";
 import { FaArrowLeftLong } from "react-icons/fa6";
 

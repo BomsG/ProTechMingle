@@ -1,17 +1,17 @@
 // import React from "react";
-import Login from "./Pages/Login";
-import ResetPassword from "./Pages/ResetPassword";
-import Confirm from "./Pages/Confirm";
+import Login from "./components/Pages/Login";
+import ResetPassword from "./components/Pages/ResetPassword";
+import Confirm from "./components/Pages/Confirm";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import SetNewPassword from "./components/SetNewPassword";
-import SignUp from "./components/SignUp";
-import ResetSuccessful from "./components/ResetSuccessful";
-import Community from "./Pages/Community";
-import OneCommunity from "./Pages/OneCommunity";
-import AllCommunities from "./components/community-features/AllCommunities";
-import CommunityList from "./components/community-features/CommunityList";
-import YourCommunites from "./components/community-features/YourCommunites";
-import About from "./components/community-features/About";
+import SetNewPassword from "./components/Pages/SetNewPassword";
+import SignUp from "./components/Pages/SignUp";
+import ResetSuccessful from "./components/Pages/ResetSuccessful";
+import Community from "./components/Pages/Community";
+import OneCommunity from "./components/Pages/OneCommunity";
+import AllCommunities from "./components/Pages/AllCommunities";
+import CommunityList from "./components/Pages/CommunityList";
+import YourCommunites from "./components/Pages/YourCommunites";
+import About from "./components/Pages/About";
 import { DataContext } from "./contexts/DataContext";
 
 function App() {

@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import illustrator from "../images/rafiki.png";
-import star from "../images/AI-stars.png";
-import google from "../images/button-icon.png";
+import illustrator from "../../images/rafiki.png";
+import star from "../../images/AI-stars.png";
+import google from "../../images/button-icon.png";
 import { useState } from "react";
 import { IoEyeOutline } from "react-icons/io5";
 import { FaRegEyeSlash } from "react-icons/fa";
-import { auth, googleProvider } from "../config/Firebase.js";
+import { auth, googleProvider } from "../../config/Firebase.js";
 import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { Link } from "react-router-dom";
 

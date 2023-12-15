@@ -6,7 +6,7 @@ import {
 } from "react-icons/hi2";
 import Avatar from "../../images/Avatars.png";
 import CommunityBanner from "../../images/community-banner.png";
-import Menus from "../community-features/Menu";
+import Menus from "./Menu";
 
 //each card should have a unique id
 

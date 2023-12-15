@@ -1,4 +1,4 @@
-import Header from "../components/re-used-community-feature/Header";
+import Header from "../re-used-community-feature/Header";
 import { Outlet } from "react-router-dom";
 
 function Community() {

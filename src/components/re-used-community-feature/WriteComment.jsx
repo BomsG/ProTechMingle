@@ -3,7 +3,7 @@ import { useState } from "react";
 import EmojiPicker from "emoji-picker-react";
 
 import Image from "../../assets/Image.png";
-import Menus from "../community-features/Menu";
+import Menus from "./Menu";
 
 function WriteComment() {
   const [chosenEmoji, setChosenEmoji] = useState("");

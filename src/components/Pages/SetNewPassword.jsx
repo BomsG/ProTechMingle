@@ -1,7 +1,7 @@
 import React from 'react'
-import eye from '../assets/Right Content.png'
-import PadLock from '../assets/Frame 35.png';
-import leftArrow from '../assets/button-icon1.png'
+import eye from '../../assets/Right Content.png'
+import PadLock from '../../assets/Frame 35.png';
+import leftArrow from '../../assets/button-icon1.png'
 import { Link } from "react-router-dom";
 
 const SetNewPassword = () => {

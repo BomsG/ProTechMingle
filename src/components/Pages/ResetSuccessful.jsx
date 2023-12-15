@@ -1,5 +1,5 @@
 import React from 'react'
-import CheckImg from '../assets/Frame 20.png'
+import CheckImg from '../../assets/Frame 20.png'
 
 const ResetSuccessful = () => {
   return (

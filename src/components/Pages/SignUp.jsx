@@ -1,8 +1,8 @@
 import React from 'react'
-import Star  from '../assets/AI-stars.png';
-import illustration from '../assets/rafiki.png'
-import buttonIcon from '../assets/button-icon.png'
-import eye from '../assets/Right Content.png'
+import Star  from '../../assets/AI-stars.png';
+import illustration from '../../assets/rafiki.png'
+import buttonIcon from '../../assets/button-icon.png'
+import eye from '../../assets/Right Content.png'
 import { Link } from "react-router-dom";
 
 const SignUp = () => {

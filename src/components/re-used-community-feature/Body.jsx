@@ -1,5 +1,4 @@
-// import Center from "./Center";
-// import Suggestions from "./Suggestions";
+
 
 //eslint-disable-next-line
 function Body({ children }) {
