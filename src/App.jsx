@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SetNewPassword from "./components/SetNewPassword";
 import SignUp from "./components/SignUp";
 import ResetSuccessful from "./components/ResetSuccessful";
+import Messages from "./components/Messages";
+
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/Reset" element={<ResetPassword />} />
           <Route path="/Confirm" element={<Confirm />} />
+          <Route path="/Messages" element={<Messages />} />
+        
 
           <Route path="/set-new-password" element={<SetNewPassword />} />
           <Route path="/reset-successful" element={<ResetSuccessful />} />

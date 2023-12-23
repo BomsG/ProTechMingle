@@ -19,7 +19,7 @@ const Confirm = () => {
             Send resend Link
           </button>
           <p className="pt-3 font-semibold text-sm lg:text-[16px]">
-            didn't get Email?{" "}
+            {"didn't"} get Email?{" "}
             <Link to="/set-new-password">
               <span className="text-[#003366] font-bold cursor-pointer">
                 Click to resend
