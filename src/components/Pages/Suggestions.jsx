@@ -42,7 +42,13 @@ function Suggestions({
       )}
       <div className="flex justify-center items-center">
         <Link
-          to={`${suggestedCommunities ? "/communities/communities-list" : existingCommunity ? '/communities/your-communities': ''}`}
+          to={`${
+            suggestedCommunities
+              ? "/communities/communities-list"
+              : existingCommunity
+              ? "/communities/your-communities"
+              : ""
+          }`}
           className="p-[10px] text-center mt-[20px] mb-[10px] rounded-[5px] bg-[#E6EBF0]"
         >
           View All

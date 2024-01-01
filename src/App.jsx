@@ -1,11 +1,11 @@
 // import React from "react";
-import Login from "./components/Pages/Login";
-import ResetPassword from "./components/Pages/ResetPassword";
+import Login from "./components/screens/Login";
+import ResetPassword from "./components/screens/ResetPassword";
 import Confirm from "./components/Pages/Confirm";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import SetNewPassword from "./components/Pages/SetNewPassword";
-import SignUp from "./components/Pages/SignUp";
-import ResetSuccessful from "./components/Pages/ResetSuccessful";
+import SetNewPassword from "./components/screens/SetNewPassword";
+import SignUp from "./components/screens/SignUp";
+import ResetSuccessful from "./components/screens/ResetSuccessful";
 import Community from "./components/Pages/Community";
 import OneCommunity from "./components/Pages/OneCommunity";
 import AllCommunities from "./components/Pages/AllCommunities";
@@ -13,6 +13,13 @@ import CommunityList from "./components/Pages/CommunityList";
 import YourCommunites from "./components/Pages/YourCommunites";
 import About from "./components/Pages/About";
 import { DataContext } from "./contexts/DataContext";
+import Event from "./components/screens/Event";
+import CreateEvent from "./components/screens/CreateEvent";
+import Physical from "./components/screens/EventPhysical";
+import Virtual from "./components/screens/Virtual";
+import Category from "./components/screens/Category";
+import Ticket from "./components/screens/Ticket";
+import Posts from "./components/screens/Posts";
 
 function App() {
   return (
@@ -42,6 +49,13 @@ function App() {
 
             <Route path="/set-new-password" element={<SetNewPassword />} />
             <Route path="/reset-successful" element={<ResetSuccessful />} />
+            <Route path="/Event" element={<Event />} />
+            <Route path="/CreateEvent" element={<CreateEvent />} />
+            <Route path="/Physical" element={<Physical />} />
+            <Route path="/Virtual" element={<Virtual />} />
+            <Route path="/Category" element={<Category />} />
+            <Route path="/Ticket" element={<Ticket />} />
+            <Route path="/Posts" element={<Posts />} />
           </Routes>
         </BrowserRouter>
       </DataContext>

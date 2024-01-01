@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import EmojiPicker from "emoji-picker-react";
+// import EmojiPicker from "emoji-picker-react";
 
 import Image from "../../assets/Image.png";
 import Menus from "./Menu";

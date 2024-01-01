@@ -1,4 +1,4 @@
-import YourCommunitiesCard from "../re-used-community-feature/YourCommunitiesCard";
+import YourCommunitiesCard from "./YourCommunitiesCard";
 
 function YourCommunites() {
   return (

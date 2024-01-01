@@ -1,12 +1,12 @@
 import { HiGlobeEuropeAfrica, HiOutlineLockClosed } from "react-icons/hi2";
 
-import Suggestions from "../re-used-community-feature/Suggestions";
-import Posts from "../re-used-community-feature/Posts";
-import CreatePost from "../re-used-community-feature/CreatePost";
-import Body from "../re-used-community-feature/Body";
-import Menus from "../re-used-community-feature/Menu";
+import Suggestions from "./Suggestions";
+import Posts from "../screens/Posts";
+import CreatePost from "./CreatePost";
+import Body from "./Body";
+import Menus from "./Menu";
 
-import Modal from "../re-used-community-feature/Modal";
+import Modal from "./Modal";
 
 import Image from "../../images/community-banner.png";
 
@@ -111,9 +111,6 @@ function AddCommunity() {
   );
 }
 
-
-
-
 function CreateCommunity() {
   return (
     <Menus>
@@ -196,10 +193,6 @@ function CreateCommunity() {
     </Menus>
   );
 }
-
-
-
-
 
 function AllCommunities() {
   return (

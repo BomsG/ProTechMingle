@@ -1,17 +1,15 @@
 import { useData } from "../../contexts/DataContext";
 
-
-import Body from "../re-used-community-feature/Body";
-import Posts from '../re-used-community-feature/Posts'
-import CreatePost from '../re-used-community-feature/CreatePost'
-import Header from "../re-used-community-feature/Header";
-import Suggestions from "../re-used-community-feature/Suggestions";
-import MemberCard from "../re-used-community-feature/MemberCard";
+import Body from "./Body";
+import Posts from "../screens/Posts";
+import CreatePost from "./CreatePost";
+import Header from "./Header";
+import Suggestions from "./Suggestions";
+import MemberCard from "./MemberCard";
 import About from "./About";
 
-
 import communityBanner from "../../images/community-banner.png";
-import Image from '../../images/Avatars.png'
+import Image from "../../images/Avatars.png";
 
 const communityCards = [
   {
@@ -106,8 +104,6 @@ const GROUP_RULES = [
   { content: "Privacy and Confidentiality" },
 ];
 
-
-
 const POST_STRUCTURE = [
   {
     title: "Post Title",
@@ -139,7 +135,6 @@ const POST_STRUCTURE = [
   },
 ];
 
-
 function Center() {
   return (
     <div className="flex flex-col gap-[15px] ">
@@ -160,10 +155,6 @@ function Center() {
     </div>
   );
 }
-
-
-
-
 
 function CommunityHeader() {
   const { dispatch, postsPage } = useData();
@@ -274,9 +265,6 @@ function CommunityHeader() {
   );
 }
 
-
-
-
 function Members() {
   return (
     <div>
@@ -286,16 +274,13 @@ function Members() {
         ))}
       </div>
       <div>
-      {Array.from({ length: 5 }, (_, i) => (
+        {Array.from({ length: 5 }, (_, i) => (
           <MemberCard key={i} />
         ))}
       </div>
     </div>
   );
 }
-
-
-
 
 function OneCommunity() {
   const { aboutPage, membersPage, postsPage, latestPage } = useData();
@@ -354,8 +339,5 @@ function OneCommunity() {
     </div>
   );
 }
-
-
-
 
 export default OneCommunity;

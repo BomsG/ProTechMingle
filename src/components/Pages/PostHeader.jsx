@@ -1,6 +1,6 @@
 import Image from "../../assets/Image.png";
 //eslint-disable-next-line
-function PostHeader({community, src, posterName, field}) {
+function PostHeader({ community, src, posterName, field }) {
   return (
     <div className="flex flex-col pb-[5px] ">
       <div className="flex mb-[5px]">
