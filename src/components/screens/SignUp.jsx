@@ -21,7 +21,7 @@ const SignUp = () => {
     fetch(`https://protechmingles.onrender.com/accounts/signup/`, {
       method: "POST",
       mode: "no-cors",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json; charset=utf-8" },
 
       body: JSON.stringify(signObj),
     })
