@@ -1,12 +1,12 @@
-import Nav from "./Nav";
-import DummyImage from "../images/dummy.png";
+import Nav from "../Pages/Nav";
+// import DummyImage from "../images/dummy.png";
 import { IoMdTime } from "react-icons/io";
 import { CiCalendar } from "react-icons/ci";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaShareAlt } from "react-icons/fa";
-import { MapContainer, TileLayer, useMap } from "react-leaflet";
-import Avatar2 from "../images/Avatar(2).png";
-import Group from "../images/AvatarGroups.png";
+// import { MapContainer, TileLayer, useMap } from "react-leaflet";
+// import Avatar2 from "../images/Avatar(2).png";
+// import Group from "../images/AvatarGroups.png";
 import { MdOutlineEmail } from "react-icons/md";
 
 const EventDetails = () => {
@@ -17,7 +17,7 @@ const EventDetails = () => {
         <Nav />
         <div>
           <img
-            src={DummyImage}
+            // src={DummyImage}
             className="w-full h-[300px] object-cover rounded-lg"
           />
           <div className="flex justify-between mt-10">
@@ -58,11 +58,11 @@ const EventDetails = () => {
               </p>
               <h1 className="text-[25px] font-bold mt-10 mb-3">Host</h1>
               <div className="flex items-center ">
-                <img src={Avatar2} className="w-[50px]" />
+                {/* <img src={Avatar2} className="w-[50px]" /> */}
                 <h2 className="font-semibold">Boma Pearl </h2>
               </div>
               <h1 className="text-[32px] font-bold mt-10">Registered</h1>
-              <img src={Group} />
+              {/* <img src={Group} /> */}
               <p className="text-sm mt-2">
                 Ojo Joseph, Malik Mustapha, and 12 others
               </p>

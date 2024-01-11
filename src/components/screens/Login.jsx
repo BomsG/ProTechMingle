@@ -111,7 +111,7 @@ const Login = () => {
                   </Link>
                 </div>
               </div>
-              <Link to="Event">
+              <Link to="/Event">
                 <button
                   className="bg-[#003366] w-full text-white text-sm rounded-lg py-3 mt-5 font-semibold"
                   onClick={signIn}

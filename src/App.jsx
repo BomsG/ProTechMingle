@@ -20,6 +20,7 @@ import Virtual from "./components/screens/Virtual";
 import Category from "./components/screens/Category";
 import Ticket from "./components/screens/Ticket";
 import Posts from "./components/screens/Posts";
+import EventDetails from "./components/screens/EventDetails";
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
             <Route path="/set-new-password" element={<SetNewPassword />} />
             <Route path="/reset-successful" element={<ResetSuccessful />} />
             <Route path="/Event" element={<Event />} />
+            <Route path="/EventD" element={<EventDetails />} />
             <Route path="/CreateEvent" element={<CreateEvent />} />
             <Route path="/Physical" element={<Physical />} />
             <Route path="/Virtual" element={<Virtual />} />

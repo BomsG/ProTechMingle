@@ -16,12 +16,12 @@ const SignUp = () => {
   const handleForm = (e) => {
     e.preventDefault();
     let signObj = { name, email, password };
-    // console.log(signObj);
+    console.log(signObj);
 
     fetch(`https://protechmingles.onrender.com/accounts/signup/`, {
       method: "POST",
       mode: "no-cors",
-      Headers: { "content-type": "application/json" },
+      headers: { "Content-Type": "application/json" },
 
       body: JSON.stringify(signObj),
     })
