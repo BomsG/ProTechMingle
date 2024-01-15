@@ -4,32 +4,33 @@ import illustration from "../../assets/rafiki.png";
 import buttonIcon from "../../assets/button-icon.png";
 import eye from "../../assets/Right Content.png";
 import { Link, json } from "react-router-dom";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { stringify } from "postcss";
 
 const SignUp = () => {
-  const [name, setName] = useState("");
+  const [username, setuserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirm_password, setConfirmPassword] = useState("");
 
   const handleForm = (e) => {
     e.preventDefault();
-    let signObj = { name, email, password };
-    console.log(signObj);
+    let signObj = { username, email, password, confirm_password };
+    const mainObj = JSON.stringify(signObj);
+    console.log(mainObj);
 
     fetch(`https://protechmingles.onrender.com/accounts/signup/`, {
       method: "POST",
-      mode: "no-cors",
+      // mode: "no-cors",
       headers: { "Content-Type": "application/json; charset=utf-8" },
-
-      body: JSON.stringify(signObj),
+      body: mainObj,
     })
       .then((res) => {
-        toast.success("Registered Successfully");
+        toast.alert("Registered Successfully");
       })
-      .catch((error) => {
-        toast.error(`Failed: ` + error.message);
+      .catch((err) => {
+        alert.error(`Failed: ` + err.messge);
       });
   };
 
@@ -77,6 +78,7 @@ const SignUp = () => {
         </div>
 
         <div className="bg-white lg:w-1/2">
+          <ToastContainer />
           <div className="max-w-md lg:w-9/12 m-auto py-6 lg:py-0">
             <h4 className="w-11/12 max-w-sm mx-auto font-semibold text-2xl text-signupButton mb-14 mt-10 lg:hidden">
               ProTechMingle
@@ -94,8 +96,8 @@ const SignUp = () => {
               <label>
                 <p className="text-lg font-medium mb-1">Name*</p>
                 <input
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  value={username}
+                  onChange={(e) => setuserName(e.target.value)}
                   type="text"
                   placeholder="Enter your name"
                   required
@@ -109,6 +111,7 @@ const SignUp = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"
+                  isEmail
                   placeholder="Enter your email"
                   className="block border border-inputBorder border-solid p-4 rounded-md placeholder:text-placeholder placeholder:font-normal placeholder:text-base w-full mb-6 focus:outline-none"
                 />
@@ -121,14 +124,25 @@ const SignUp = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     type="password"
+                    pattern="[0-9a-zA-Z ]{8,}"
                     placeholder="Enter your password"
                     className="w-full placeholder:text-placeholder placeholder:font-normal placeholder:text-base border-none outline-none"
                   />
                   <img src={eye} alt="eye-icon" />
                 </div>
-                <p className="font-normal text-passwordText text-base mb-9">
-                  Minimum of 8 characters
-                </p>
+              </label>
+              <label className="mt-6">
+                <p className="text-lg font-medium mb-1">Confirm Password*</p>
+                <div className="border border-inputBorder border-solid p-4 rounded-md mb-2 flex items-center">
+                  <input
+                    value={confirm_password}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    type="password"
+                    placeholder="Confirm Password"
+                    className="w-full placeholder:text-placeholder placeholder:font-normal placeholder:text-base border-none outline-none"
+                  />
+                  <img src={eye} alt="eye-icon" />
+                </div>
               </label>
 
               <input

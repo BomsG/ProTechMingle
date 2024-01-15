@@ -8,25 +8,36 @@ import { FaRegEyeSlash } from "react-icons/fa";
 import { auth, googleProvider } from "../../config/Firebase.js";
 import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  console.log(auth?.currentUser?.email);
-  const signIn = async () => {
-    try {
-      await createUserWithEmailAndPassword(auth, email, password);
-    } catch (err) {
-      console.error(err);
-    }
+  const handleLogin = () => {
+    let objLogin = { email, password };
+    console.log(objLogin);
   };
-  const siginWithGoogle = async () => {
-    try {
-      await signInWithPopup(auth, googleProvider);
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  // console.log(auth?.currentUser?.email);
+  // const signIn = async () => {
+  //   try {
+  //     await createUserWithEmailAndPassword(auth, email, password);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
+  // const siginWithGoogle = async () => {
+  //   try {
+  //     await signInWithPopup(auth, googleProvider);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
+  // const proceedLogin = () => {
+  //   e.preventDefault();
+  //   if (validate()) {
+  //     fetch(`https://protechmingles.onrender.com/accounts/signup/`);
+  //   }
+  // };
 
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => {
@@ -77,6 +88,7 @@ const Login = () => {
                 type="email"
                 placeholder="Enter your email"
                 id="email"
+                value={email}
                 className="w-[100%] py-[12px] px-2 border border-[#656565] rounded-[5px] text-sm mb-5"
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -92,6 +104,7 @@ const Login = () => {
                   type={passwordShown ? "text" : "password"}
                   placeholder="Enter your password"
                   id="password"
+                  value={password}
                   className="w-full border-none outline-none  text-sm"
                   onChange={(e) => setPassword(e.target.value)}
                   required
@@ -111,17 +124,16 @@ const Login = () => {
                   </Link>
                 </div>
               </div>
-              <Link to="/Event">
-                <button
-                  className="bg-[#003366] w-full text-white text-sm rounded-lg py-3 mt-5 font-semibold"
-                  onClick={signIn}
-                >
-                  Log in
-                </button>
-              </Link>
+              {/* <Link to="/Event"> */}
+              <input
+                type="submit"
+                className="bg-[#003366] w-full text-white text-sm rounded-lg py-3 mt-5 font-semibold"
+              />
+              Log in
+              {/* </Link> */}
               <button
                 className="border border-[#003366] text-[#003366] w-full font-bold rounded-lg py-3 mt-5 flex justify-center"
-                onClick={siginWithGoogle}
+                // onClick={siginWithGoogle}
               >
                 <img src={google} />
                 Sign in with Google
