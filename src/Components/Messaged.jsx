@@ -9,9 +9,9 @@ export default function Messaged() {
 
     return (
         <>
-            <div className="w-full flex flex-col justify-between h-full border-l pl-[5px] border-solid mt-[3%] mb-[10px]">
+            <div className="w-full flex flex-col justify-between h-full border-l pl-[5px] border-solid mt-[3%] mb-[10px] sm-auto">
                 <header className="h-[9%]"><div>Messaged</div></header>
-                <span className="chats h-full"></span>
+                <span className="chats h-[100%]"></span>
    
                 <div className="w-full flex justify-between space-x-5">
                     <span className="h-[56px] py-[20px] top-0 text-1xl"><SlPicture/></span>

@@ -7,6 +7,7 @@ import SetNewPassword from "./components/SetNewPassword";
 import SignUp from "./components/SignUp";
 import ResetSuccessful from "./components/ResetSuccessful";
 import Messages from "./components/Messages";
+import Profile from "./components/Profile";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Reset" element={<ResetPassword />} />
           <Route path="/Confirm" element={<Confirm />} />
           <Route path="/Messages" element={<Messages />} />
+          <Route path="/Profile" element={<Profile />} />
         
 
           <Route path="/set-new-password" element={<SetNewPassword />} />

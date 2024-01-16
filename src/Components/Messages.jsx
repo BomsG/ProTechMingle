@@ -17,8 +17,8 @@ export default function Messages() {
     return(
         <>
          {<Navbar/>}
-            <div className='lg:flex px-[80px]'>
-                <div className='lg:block lg:h-full lg:w-1/2 mt-[30px]'>
+            <div className="lg:flex px-[80px] h-full ">
+                <div className="lg:block h-[100%] w-1/2 mt-[30px] sm:w-auto">
                      <div className="flex flex-col gap-[24px] scroll-py-[0.5px]">
                         <div className="flex justify-between">
                             <h1 className="h1 text-black font-bold">Messages</h1>
@@ -34,7 +34,7 @@ export default function Messages() {
                     </div>
                 </div>
         
-                <section className="flex-grow lg:w-1/2">
+                <section className="flex-grow w-1/2 h-[100%] sm:w-auto">
                 <div className="flex h-[620px] justify-center items-center lg:pl-[5%] py-6 lg:py-0">
                     {
                         isDisplay ?
@@ -45,7 +45,7 @@ export default function Messages() {
                             </p>
                             <button onClick={()=>setIsDisplay(false)}className="p-3 bg-[#003366] text-white rounded-md">Start New Conversation</button>
                         </div>
-                        : startConversation ?<div className="h-[100%] w-[100%] border border-inputBorder border-solid overflow-auto">
+                        : startConversation ?<div className="h-[100%] w-[100%] border border-input Border border-solid overflow-auto sm:w-auto">
                             <header className="p-[10px] transition ease-in-out delay-500 text-center border-b border-solid">Get Friends Here!</header>
                             <div>
                                 <ul>
